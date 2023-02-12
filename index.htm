@@ -1,0 +1,85 @@
+<!Doctype html>
+<html>
+<head>
+	<!-- Styles -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/index.css">
+
+	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+
+	<!-- Scripts -->
+
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	
+	<section class="sideMenu" ng-repeat="project in umsProject">
+	
+	<div class="headerWrapper">
+	
+		<!-- Hover on button to drop down admin menu -->
+			<span class="drop_down">
+				<span class="fa fa-angle-down"></span>
+			</span>
+			
+		<!-- Admin section. top-left corner -->
+		<header class="adminBox">
+			<div class="award"><img src="images/badge.png" width="25px" />
+				<div class="awardTooltip">
+					<div class="pointer"></div>
+					Organise your groups in color and assign all free users a group to reach Level 2!
+				</div>	<!-- end .awardTooltip -->
+			</div>	<!-- end .award -->
+			
+			
+			<img src="images/profile.gif" width="50px;" />
+			<div class="adminDetails">
+				<h2>Admin</h2>
+			</div>	<!-- end .adminDetails-->
+			
+			<!-- further details are hidden -->
+			
+			<div class="admin">
+				<h3>Personal Details</h3>
+				<p title="Edit">Name</p>
+				<h4 title="Edit">AdminName</h4>
+				<p title="Edit">Contact</p>
+				<h4 title="Edit">(+1) 888-0418</h4>
+				<p title="Edit">Address</p>
+				<h4 title="Edit">AdminAddress <br /> Somewhere in Germany.</h4>
+				<p title="Edit">About</p>
+				<h4 title="Edit">Gummi bears caramels sugar plum lollipop jelly beans biscuit. Cupcake pastry gummies cheesecake biscuit. Jujubes cotton candy icing. Fruitcake fruitcake.</h4>
+			</div>	<!-- end .admin -->
+			
+			<!-- end hidden details -->
+		</header>	<!-- end .adminBox -->
+		</div>	<!-- end .headerWrapper -->
+		
+		<div class="groups">
+			<h2>Groups</h2>
+			<div class="groupList">
+				<ul>
+					<li id="item"><span class="fa fa-stop red"></span><a href="#">GroupName_1</a><i class="fa fa-remove"></i></li>
+					<li><span class="fa fa-stop"></span><a href="#">GroupName_2</a><i class="fa fa-remove"></i></li>
+					<li><span class="fa fa-stop green"></span><a href="#">GroupName_3</a><i class="fa fa-remove"></i></li>
+					<li><span class="fa fa-stop blue"></span><a href="#">GroupName_4</a><i class="fa fa-remove"></i></li>
+				</ul>
+			</div>	<!-- end .groupList -->
+			<a class="allGroups" href="#">All groups</a>
+		</div>	<!-- end .groups -->
+	</section> <!-- end section -->
+	
+	<script>
+		
+		$(function() {
+		
+			$('i').click(function() {
+				$(this).parent().addClass('remove');
+			});
+		});
+		
+		
+	</script>
+
+</body>
+</html>

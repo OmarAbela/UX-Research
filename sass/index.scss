@@ -1,0 +1,262 @@
+@import '../partials/variables';
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: $margins;
+	padding: $paddings;
+	
+	section {
+		background:#262626;
+		width:230px;
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		
+		div.headerWrapper {
+			position:relative;
+		
+			span {
+				&.drop_down {
+					cursor:pointer;
+					background:#1b1b1b;
+					@include padding(0, 5px, 0, 5px);
+					height:15px;
+					position:absolute;
+					bottom:-15px;
+					z-index:1;
+					left:5px;
+					border-bottom-left-radius: 4px;
+					border-bottom-right-radius: 4px;
+					border:1px solid #000;
+					border-top:none;
+					color: $colors;
+					
+					span {
+						position:relative;
+						top:-5px;
+					}
+				}
+			}
+			
+		}
+		
+		header {
+			height:57px;
+			overflow:hidden;
+			overflow-x: none;
+			border-bottom:1px solid #000;
+			background:#1b1b1b;
+			@include padding(14px, 4px, 14px, 11px);
+			@include animation();
+			
+			&:hover {
+				height:541px;
+			}
+			
+			div {
+			
+				&.admin {
+					clear:both;
+					margin-top:90px;
+					padding-right:10px;
+					color: #fff;
+					
+					h3 {
+						margin:0;
+						font-size:1em;
+						margin-bottom:25px;
+						font-weight:lighter;
+					}
+					
+					p {
+						margin:0;
+						font-size:.8em;
+						color:#c0c0c0;
+						cursor: $cursors;
+					}
+					
+					h4 {
+						font-weight:lighter;
+						font-size:.9em;
+						margin:0;
+						margin-bottom:22px;
+						color:#d5d5d5;
+						cursor: $cursors;
+					}
+				}
+			
+				&.award {
+					cursor:pointer;
+					float:right;
+					margin-right:10px;
+					margin-top:6px;
+					padding:5px;
+					
+					div{
+					
+						&.awardTooltip {
+							position:absolute;
+							padding:5px;
+							background:#0096ff;
+							width:479px;
+							font-size:.8em;
+							color:#fff;
+							border-radius: 2px;
+							right:-485px;
+							top:6px;
+							display:none;
+						
+						
+							div.pointer {
+								width: 0; 
+								height: 0; 
+								border-top: 12px solid transparent;
+								border-bottom: 0 solid transparent;
+								border-right: 13px solid #0096ff;
+								position:absolute;
+								left:-10px;
+								top:12px;
+							}
+							
+						}
+					}
+				}
+				
+				&.award:hover > div.awardTooltip {
+					display:block;
+				}
+				
+				&.adminDetails {
+					padding:5px;
+					float:left;
+					
+					h2 {
+						color:$colors;
+						margin:1px;
+						font-size:1em;
+					}
+				}
+			}
+			
+			img {
+				border-radius: 1px;
+				float:left;
+			}
+			
+		}
+		
+		div {
+			&.groups {
+				/*border: 1px solid white;*/
+				margin-top:40px;
+				height:242px;
+				
+				a.allGroups {
+					text-decoration:none;
+					color: #818181;
+					font-size:.7em;
+					position:relative;
+					top:10px;
+					left:10px;
+					
+					&:hover {
+						color:#909090;
+						text-decoration:underline;
+					}
+				}
+				
+				
+				h2 {
+					margin:1px;
+					margin-left:10px;
+					color: $colors;
+					font-size:.9em;
+					font-weight:lighter;
+				}
+				
+				div {
+					&.groupList {
+						margin-top:20px;
+						
+						ul {
+							padding:0 !important;
+							margin:0;
+							
+							li {
+								list-style:none;
+								border-bottom:1px solid #3d3d3d;
+								overflow:hidden;
+								@include padding(3px, 0, 3px, 0);
+								@include animation();
+								
+								i {
+									visibility:hidden;
+									color:#e2e2e2;
+									font-weight:lighter !important;
+									font-size:.6em;
+									position:relative;
+									right:10px;
+								}
+								
+								&:first-child {
+									border-top:1px solid #3d3d3d;
+									
+								}
+								
+								&:hover {
+									background:#2e2e2e;
+									border-bottom:1px solid #5a5a5a;
+								}
+								
+								&:hover > i {
+									visibility:visible;
+								}
+								
+								span {
+									color:gold;
+									border:1px solid #000;
+									float:left;
+									margin:7px 8px 0 10px;
+									font-size:.9em;
+									
+									&.red {
+										color:#ea0000;
+									}
+									
+									&.green {
+										color:#0bea00;
+									}
+									
+									&.blue {
+										color:#0090ff;
+									}
+								}
+
+								
+								a {
+									float:left;
+									font-size:.9em;
+									width:185px;
+									color:#cacaca;
+									display:block;
+									text-decoration:none;
+									@include padding(5px, 0, 5px, 0);
+									@include animation();
+									
+									&:hover {
+										color: $colors;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.remove {
+	display:none;
+}
